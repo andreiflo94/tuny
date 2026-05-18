@@ -22,7 +22,11 @@ A clean, real-time guitar tuner for Android built entirely with Jetpack Compose.
 
 ## Screenshots
 
-> _Add screenshots here once the app is running on a device._
+<p align="center">
+  <img src="screenshots/Screenshot_20260518_221229_Tuny.jpg" width="30%" />
+  <img src="screenshots/Screenshot_20260518_221233_Tuny.jpg" width="30%" />
+  <img src="screenshots/Screenshot_20260518_221333_Tuny.jpg" width="30%" />
+</p>
 
 ---
 
