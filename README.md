@@ -30,19 +30,25 @@ A clean, real-time guitar tuner for Android built entirely with Jetpack Compose.
 
 ---
 
+## Download
+
+[Download APK (debug build)](builds/app-debug.apk)
+
+---
+
 ## Architecture
 
 The project follows **Clean Architecture** with an **MVI** presentation pattern, all in a single `:app` module.
 
 ```
+data/            Android implementation details
+  audio/         PitchDetector  (NSDF algorithm)
+  repository/    TunerRepositoryImpl  (AudioRecord, sliding window)
+  
 domain/          Pure Kotlin — no Android dependencies
   model/         GuitarString, TuningResult
   repository/    TunerRepository interface
   usecase/       GetTuningResultUseCase  (freq → TuningResult, conflated Flow)
-
-data/            Android implementation details
-  audio/         PitchDetector  (NSDF algorithm)
-  repository/    TunerRepositoryImpl  (AudioRecord, sliding window)
 
 presentation/    Jetpack Compose + MVI
   TunerIntent    Sealed interface of user actions
